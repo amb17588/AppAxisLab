@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — PeriodTracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #FDFAF6;
+            --color-surface: #FFFFFF;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #5C5C5C;
+            --color-accent: #C2185B;
+            --color-accent-soft: #FCE4EC;
+            --color-border: #E8E2DA;
+            --color-highlight: #FFF3E0;
+            --font-display: 'Fraunces', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --max-width: 720px;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2.5rem;
+            --space-xl: 4rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #1A1215;
+                --color-surface: #241A1E;
+                --color-text: #F0E8EB;
+                --color-text-secondary: #A89BA0;
+                --color-accent: #F06292;
+                --color-accent-soft: #3D1A2A;
+                --color-border: #3A2A30;
+                --color-highlight: #2E2218;
+            }
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            line-height: 1.75;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ─── HEADER ─── */
+        .site-header {
+            padding: var(--space-md) var(--space-md);
+            border-bottom: 1px solid var(--color-border);
+            background: var(--color-surface);
+        }
+
+        .site-header__inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .site-header__brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--color-text);
+        }
+
+        .site-header__icon {
+            width: 32px;
+            height: 32px;
+            background: var(--color-accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .site-header__name {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: -0.01em;
+        }
+
+        .site-header__back {
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .site-header__back:hover {
+            text-decoration: underline;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md) var(--space-lg);
+        }
+
+        .hero__label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-accent);
+            background: var(--color-accent-soft);
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+            margin-bottom: var(--space-xs);
+        }
+
+        .hero__meta {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* ─── TABLE OF CONTENTS ─── */
+        .toc {
+            max-width: var(--max-width);
+            margin: 0 auto var(--space-lg);
+            padding: 0 var(--space-md);
+        }
+
+        .toc__box {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: var(--space-md);
+        }
+
+        .toc__title {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: var(--space-sm);
+            color: var(--color-text);
+        }
+
+        .toc__list {
+            list-style: none;
+            columns: 2;
+            column-gap: var(--space-lg);
+        }
+
+        @media (max-width: 600px) {
+            .toc__list { columns: 1; }
+        }
+
+        .toc__list li {
+            break-inside: avoid;
+            margin-bottom: 0.4rem;
+        }
+
+        .toc__list a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.15s;
+        }
+
+        .toc__list a:hover {
+            text-decoration: underline;
+        }
+
+        /* ─── CONTENT ─── */
+        .content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--space-md) var(--space-xl);
+        }
+
+        .content section {
+            margin-bottom: var(--space-lg);
+        }
+
+        .content h2 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.35rem;
+            letter-spacing: -0.01em;
+            color: var(--color-text);
+            margin-bottom: var(--space-sm);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .content h2:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .content h3 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--color-text);
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-xs);
+        }
+
+        .content p {
+            margin-bottom: var(--space-sm);
+            color: var(--color-text-secondary);
+        }
+
+        .content strong {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .content ul {
+            list-style: none;
+            margin-bottom: var(--space-sm);
+            padding-left: 0;
+        }
+
+        .content ul li {
+            position: relative;
+            padding-left: 1.4rem;
+            margin-bottom: 0.35rem;
+            color: var(--color-text-secondary);
+        }
+
+        .content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.65rem;
+            width: 6px;
+            height: 6px;
+            background: var(--color-accent);
+            border-radius: 50%;
+        }
+
+        /* Callout box */
+        .callout {
+            background: var(--color-highlight);
+            border-left: 3px solid var(--color-accent);
+            border-radius: 0 8px 8px 0;
+            padding: var(--space-sm) var(--space-md);
+            margin: var(--space-md) 0;
+        }
+
+        .callout p {
+            color: var(--color-text);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Table */
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-sm) 0 var(--space-md);
+            font-size: 0.9rem;
+        }
+
+        .content th, .content td {
+            text-align: left;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .content th {
+            font-weight: 600;
+            color: var(--color-text);
+            background: var(--color-surface);
+        }
+
+        .content td {
+            color: var(--color-text-secondary);
+        }
+
+        /* ─── FOOTER ─── */
+        .site-footer {
+            border-top: 1px solid var(--color-border);
+            padding: var(--space-lg) var(--space-md);
+            text-align: center;
+        }
+
+        .site-footer p {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        /* ─── PRINT ─── */
+        @media print {
+            body { background: white; color: black; font-size: 11pt; }
+            .site-header, .toc, .site-footer { display: none; }
+            .content { max-width: 100%; padding: 0; }
+            .content h2 { border-top: 1px solid #ccc; }
+            .callout { border-left-color: #333; background: #f5f5f5; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-header__brand">
+                <span class="site-header__icon">🩸</span>
+                <span class="site-header__name">PeriodTracker</span>
+            </a>
+            <a href="index.html" class="site-header__back">← Back to home</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <span class="hero__label">Legal</span>
+        <h1>Privacy Policy</h1>
+        <p class="hero__meta">Last updated: April 21, 2026 &middot; Version 1.0</p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <nav class="toc" aria-label="Table of contents">
+        <div class="toc__box">
+            <p class="toc__title">Contents</p>
+            <ol class="toc__list">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#data-we-process">Data We Process</a></li>
+                <li><a href="#where-your-data-lives">Where Your Data Lives</a></li>
+                <li><a href="#what-we-do-not-do">What We Do Not Do</a></li>
+                <li><a href="#subscription-data">Subscription Data</a></li>
+                <li><a href="#cloud-backup">Cloud Backup</a></li>
+                <li><a href="#your-rights">Your Rights</a></li>
+                <li><a href="#childrens-privacy">Children's Privacy</a></li>
+                <li><a href="#law-enforcement">Law Enforcement</a></li>
+                <li><a href="#changes">Changes to This Policy</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- 1 -->
+        <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p><strong>PeriodTracker</strong> ("the App") is a menstrual cycle and ovulation tracking application developed by App Axis Lab ("we," "us," or "our"). Your privacy is our highest priority.</p>
+            <p>This policy explains what data the App handles, how it handles that data, and what rights you have. We've designed PeriodTracker so that <strong>your health data never leaves your device</strong> unless you explicitly choose to create an encrypted backup.</p>
+
+            <div class="callout">
+                <p><strong>The short version:</strong> All your health data stays on your phone, encrypted. We don't have a server. We can't see your data. We don't sell it. We don't share it. Period.</p>
+            </div>
+        </section>
+
+        <!-- 2 -->
+        <section id="data-we-process">
+            <h2>2. Data We Process</h2>
+
+            <h3>Health data you enter</h3>
+            <p>The App processes the following health-related data that you voluntarily enter:</p>
+            <ul>
+                <li>Menstrual cycle dates (period start and end dates)</li>
+                <li>Flow intensity</li>
+                <li>Symptoms and their severity</li>
+                <li>Mood</li>
+                <li>Basal body temperature (BBT) readings</li>
+                <li>Cervical mucus observations</li>
+                <li>Sexual activity</li>
+                <li>Pill reminder status (taken, skipped, missed)</li>
+            </ul>
+
+            <h3>Profile preferences</h3>
+            <ul>
+                <li>Birth year (for age verification only — not your full date of birth)</li>
+                <li>Cycle and period length defaults</li>
+                <li>Temperature unit preference (°F / °C)</li>
+                <li>Goal mode (tracking, conceiving, or fertility awareness)</li>
+            </ul>
+
+            <h3>What we do NOT collect</h3>
+            <p>We do <strong>not</strong> collect your name, email address, phone number, physical address, location, IP address, device identifiers, or any data that could identify you personally.</p>
+        </section>
+
+        <!-- 3 -->
+        <section id="where-your-data-lives">
+            <h2>3. Where Your Data Lives</h2>
+            <p><strong>All health data is stored exclusively on your device.</strong> It is encrypted at rest using AES-256 encryption (via SQLCipher). The encryption key is stored in your device's secure hardware (iOS Keychain / Android Keystore) and is protected by your biometric authentication or device passcode.</p>
+            <p>We operate <strong>no backend servers</strong>. We maintain <strong>no database</strong> of user health data. We have <strong>no ability</strong> to access, read, or retrieve your health data.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>Data leaves device?</th>
+                        <th>Encrypted?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Normal app usage</td>
+                        <td>No</td>
+                        <td>Encrypted at rest (AES-256)</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud backup (optional, paid)</td>
+                        <td>Yes — to your own cloud storage</td>
+                        <td>AES-256 encrypted before upload; we never hold the key</td>
+                    </tr>
+                    <tr>
+                        <td>Data export (JSON/CSV)</td>
+                        <td>Only if you share it</td>
+                        <td>Your responsibility after export</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 4 -->
+        <section id="what-we-do-not-do">
+            <h2>4. What We Do Not Do</h2>
+            <p>We want to be unambiguous:</p>
+            <ul>
+                <li>We do <strong>not</strong> use any third-party analytics, advertising, or tracking SDKs.</li>
+                <li>We do <strong>not</strong> share, sell, rent, or trade your data with any third party for any purpose.</li>
+                <li>We do <strong>not</strong> display advertisements.</li>
+                <li>We do <strong>not</strong> send your health data to any server we operate.</li>
+                <li>We do <strong>not</strong> create user profiles, behavioral models, or data aggregations.</li>
+                <li>We do <strong>not</strong> use meta-pixels, Google Analytics, Facebook SDK, or any similar tracking technology.</li>
+                <li>We do <strong>not</strong> collect or process your geographic location.</li>
+            </ul>
+        </section>
+
+        <!-- 5 -->
+        <section id="subscription-data">
+            <h2>5. Subscription Data</h2>
+            <p>If you subscribe to PeriodTracker Premium, your payment is processed entirely by <strong>Apple</strong> (via the App Store) or <strong>Google</strong> (via Google Play). We never see your payment details (credit card number, billing address, etc.).</p>
+            <p>Subscription status is managed by <strong>RevenueCat, Inc.</strong>, a third-party service that receives anonymous transaction data from Apple and Google. RevenueCat assigns a pseudonymous identifier (not linked to your identity) to track your subscription status. RevenueCat does <strong>not</strong> receive any health data from the App.</p>
+            <p>For RevenueCat's privacy practices, see <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</p>
+        </section>
+
+        <!-- 6 -->
+        <section id="cloud-backup">
+            <h2>6. Cloud Backup (Optional, Paid Feature)</h2>
+            <p>If you choose to use the Cloud Backup feature:</p>
+            <ul>
+                <li>Your data is encrypted <strong>on your device</strong> using a password you set, <strong>before</strong> it leaves your device.</li>
+                <li>The encrypted backup is stored in <strong>your own cloud storage account</strong> (Google Drive, iCloud, OneDrive, Dropbox, or Box).</li>
+                <li>We never possess the encryption key and <strong>cannot decrypt your backup</strong>.</li>
+                <li>A recovery code generated during setup allows you to restore your data on a new device. <strong>If you lose both your device and your recovery code, your data is unrecoverable.</strong> We cannot help in this scenario — this is the privacy tradeoff.</li>
+            </ul>
+
+            <div class="callout">
+                <p><strong>Important:</strong> We do not operate the cloud storage. Your backup lives in your personal Google Drive, iCloud, OneDrive, Dropbox, or Box account. We have no access to it.</p>
+            </div>
+        </section>
+
+        <!-- 7 -->
+        <section id="your-rights">
+            <h2>7. Your Rights</h2>
+            <p>Regardless of where you live, you have the following rights in the App:</p>
+
+            <h3>Delete</h3>
+            <p>You can delete <strong>all</strong> your data at any time from <strong>Settings → Data Management → Delete All Data</strong>. This action is irreversible and immediate. All health data, preferences, and logs are permanently erased from your device.</p>
+
+            <h3>Export</h3>
+            <p>You can export your data in JSON or CSV format at any time from <strong>Settings → Data Management → Export Data</strong>. The exported file is in a standard format usable by other applications.</p>
+
+            <h3>Access</h3>
+            <p>All your data is visible to you within the App at all times. There is no hidden data collection.</p>
+
+            <h3>For EU/EEA residents (GDPR)</h3>
+            <p>You have additional rights under the General Data Protection Regulation, including the right to data portability and the right to erasure. The App supports both via the Export and Delete features described above. Because we do not process your data on our servers, there is no data controller action required for most rights — your data is already under your control.</p>
+
+            <h3>For California residents (CCPA/CPRA)</h3>
+            <p>We do not sell or share your personal information. You have the right to know what data is collected (this policy), the right to delete (in-app), and the right to opt out of the sale of personal information (not applicable — we never sell data).</p>
+        </section>
+
+        <!-- 8 -->
+        <section id="childrens-privacy">
+            <h2>8. Children's Privacy</h2>
+            <p>The App is not intended for children under 13 (or under 16 in jurisdictions where GDPR applies). Age verification is performed during the App's onboarding process. We do not knowingly collect data from children below these ages.</p>
+        </section>
+
+        <!-- 9 -->
+        <section id="law-enforcement">
+            <h2>9. Law Enforcement Requests</h2>
+            <p>Because we do not operate servers or databases containing user data, <strong>we have no data to provide</strong> in response to subpoenas, court orders, or government requests.</p>
+            <p>Cloud backups are encrypted with user-held keys. We do not possess decryption keys and cannot comply with requests to decrypt backup data.</p>
+        </section>
+
+        <!-- 10 -->
+        <section id="changes">
+            <h2>10. Changes to This Policy</h2>
+            <p>If we make material changes to this policy, we will notify you via an in-app notification before the changes take effect. Continued use of the App after notification constitutes acceptance of the updated policy.</p>
+            <p>Non-material changes (formatting, clarification, typo fixes) may be made without notification.</p>
+        </section>
+
+        <!-- 11 -->
+        <section id="contact">
+            <h2>11. Contact Us</h2>
+            <p>If you have questions about this privacy policy or our data practices, contact us at:</p>
+            <ul>
+                <li><strong>Email:</strong> appaxislab@gmail.com</li>
+                <li><strong>Company:</strong> App Axis Lab</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 App Axis Lab. All rights reserved. PeriodTracker is a wellness and logging tool, not a medical device.</p>
+    </footer>
+
+</body>
+</html>
