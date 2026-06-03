@@ -133,6 +133,22 @@
     .weather-bg{background:linear-gradient(180deg,#e6f5ff,#d5ebff);}
     .finance-bg{background:linear-gradient(180deg,#e8e8ff,#dcdcff);}
     .music-bg{background:linear-gradient(180deg,#fbe8ff,#f3dbff);}
+    .art-bg{background:linear-gradient(180deg,#fff4e6,#ffe8cc);}
+
+    .app-actions{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
+      width:100%;
+    }
+    .privacy-link{
+      font-size:12px;
+      font-weight:600;
+      color:#2563eb;
+      text-decoration:none;
+    }
+    .privacy-link:hover{text-decoration:underline;}
 
     /* About */
     .about{
